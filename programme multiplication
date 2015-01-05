@@ -1,0 +1,23 @@
+# a = le chiffre a multiplier
+
+def entree():
+#Les entrees du programme
+	print ("Calcul d'une table de multiplication de 1 a 15")
+	a = float(input("Indiquez la valeur de votre chiffre a multiplier :"))
+	return a
+	
+# le calcul
+
+def fonction(x,a):
+	y=a*x
+	return y
+
+# le résultat
+
+def pourImpression(a):
+	for x in range(1,16):
+		print ("\n"+str(a)+"x"+str(x)+" = "+str(fonction(x,a))+"\n")
+print (" ---> Debut du programme.\n")
+coefA=entree()
+pourImpression(coefA)
+print ("\n ---> Fin du programme.")
