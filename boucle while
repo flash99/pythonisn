@@ -1,0 +1,34 @@
+def entree():
+	
+	#Les entrées
+
+	print ("Calcul de la table de multiplication de 7 j'usqu'a a :.\n")
+	a = float(input("Indiquez la valeur de a :"))
+	return a
+
+	
+
+def pourImpression(a):
+	
+	#le calcul
+	
+	x=0
+	while x<a+1:
+		print ("\n"+str(x)+"x7"+"="+str(calcul(x,a))+"\n")
+		x=x+1
+		
+		
+		
+def calcul(x,a):
+	
+	#Le calcul bref
+	
+	y= x*7
+	return y
+		
+		
+		
+print (" ---> Debut du programme.\n")
+coefA=entree()
+pourImpression(coefA)
+print ("\n ---> Fin du programme.")
