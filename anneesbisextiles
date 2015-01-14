@@ -1,0 +1,42 @@
+
+#L'entrée
+
+def entree():
+	a = int(input("Quelle année voulez-vous savoir si elle est bisextile ? :"))
+	return a
+
+#Le calcul :
+
+def calcul(a):
+	if a%4==0:
+		#condition pour l'année/4
+		if a%100==0:
+			#condition pour l'année/100
+			if a%400==0:
+				#condition pour l'année/400
+				return True
+				#Les mots return true servent a renvoyer une condition vraie, remplie
+			else:
+				return False
+				#Les mots return true servent a renvoyer une condition fausse, erronée
+		else:
+			return True
+			#Les mots return true servent a renvoyer une condition vraie, remplie
+	else:
+		return False
+		#Les mots return true servent a renvoyer une condition fausse, erronée
+		
+#Affiche si l'année est bisextile :
+
+def pourImpression(a):
+	if calcul(a):
+		#On reçoit ici de la part de "calcul" si calcul est vraie, remplie alors écrire :
+		print ("L'année "+str(a)+" est bisextile")
+	else:
+		#Si on reçoit de la part de calcul la condition fausse, erronée alors alors écrire :
+		print ("L'année "+str(a)+" n'est pas bisextile")
+
+print ("   ---> Debut du programme.\n")
+annee=entree()
+pourImpression(annee)
+print ("\n   ---> Fin du programme.")
