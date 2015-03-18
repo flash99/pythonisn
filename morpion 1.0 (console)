@@ -1,0 +1,198 @@
+#Le début : 
+
+print ("Bonjour ! Ceci est un programme qui ""emule""le jeu du morpion ! ")
+print ("Le joueur 1 sera les X et le joueur 2 sera les O :")
+
+#Fonction qui affiche la grille
+
+def afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9):
+	print ("  _____ _____ _____      _____ _____ _____ ")
+	print (" |     |     |     |    |     |     |     |")
+	print (" |  "+str(x1)+"  |  "+str(x2)+"  |  "+str(x3)+"  |    |  1  |  2  |  3  |")
+	print (" |_____|_____|_____|    |_____|_____|_____|")
+	print (" |     |     |     |    |     |     |     |")
+	print (" |  "+str(x4)+"  |  "+str(x5)+"  |  "+str(x6)+"  |    |  4  |  5  |  6  |")
+	print (" |_____|_____|_____|    |_____|_____|_____|")
+	print (" |     |     |     |    |     |     |     |")
+	print (" |  "+str(x7)+"  |  "+str(x8)+"  |  "+str(x9)+"  |    |  7  |  8  |  9  |")
+	print (" |_____|_____|_____|    |_____|_____|_____|")
+	print ("                                           ")
+
+#Assignation de valeurs aux variables
+
+x1=(" ")
+x2=(" ")
+x3=(" ")
+x4=(" ")
+x5=(" ")
+x6=(" ")
+x7=(" ")
+x8=(" ")
+x9=(" ")
+joueur=1
+sjoueur=("X")
+win=0
+
+#Le programme
+
+def entree(x1,x2,x3,x4,x5,x6,x7,x8,x9,joueur,sjoueur,win):
+	while not win==1:
+		
+		#L'assignateur de joueurs
+		
+		if joueur==1:
+			sjoueur=("X")
+		if joueur==2:
+			sjoueur=("O")
+		if joueur==3:
+			joueur=1
+			sjoueur=("X")
+		
+		#Les entrées
+		
+		afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
+		case = -1
+		while not case-1 in range(9):
+			case = input("Entrez le numéro de la case :")
+			try:
+				case = int(case)
+			except:
+				print("Ce n'est pas un numéro valide !")
+				case = -1
+			else:
+				if not case-1 in range(9):
+					print("Ce n'est pas un numéro valide !")
+			
+			#Le placeur/vérificateur de X ou de O
+					
+		if case==1:
+			if x1==(" "):
+				x1=(""+str(sjoueur)+"")
+			else:
+				print ("Cette case est déja prise !")
+				joueur=joueur-1	
+		if case==2:
+			if x2==(" "):
+				x2=(""+str(sjoueur)+"")
+			else:
+				print ("Cette case est déja prise !")
+				joueur=joueur-1
+		if case==3:
+			if x3==(" "):
+				x3=(""+str(sjoueur)+"")
+			else:
+				print ("Cette case est déja prise !")
+				joueur=joueur-1
+		if case==4:
+			if x4==(" "):
+				x4=(""+str(sjoueur)+"")
+			else:
+				print ("Cette case est déja prise !")
+				joueur=joueur-1
+		if case==5:
+			if x5==(" "):
+				x5=(""+str(sjoueur)+"")
+			else:
+				print ("Cette case est déja prise !")
+				joueur=joueur-1
+		if case==6:
+			if x6==(" "):
+				x6=(""+str(sjoueur)+"")
+			else:
+				print ("Cette case est déja prise !")
+				joueur=joueur-1
+		if case==7:
+			if x7==(" "):
+				x7=(""+str(sjoueur)+"")
+			else:
+				print ("Cette case est déja prise !")
+				joueur=joueur-1
+		if case==8:
+			if x8==(" "):
+				x8=(""+str(sjoueur)+"")
+			else:
+				print ("Cette case est déja prise !")
+				joueur=joueur-1
+		if case==9:
+			if x9==(" "):
+				x9=(""+str(sjoueur)+"")
+			else:
+				print ("Cette case est déja prise !")
+				joueur=joueur-1
+	
+		joueur=joueur+1
+		
+		#Le vérificateur de victoire pour les X
+		
+		if x1==("X") and x2==("X") and x3==("X"):
+			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
+			print ("X gagné")
+			win=1
+		if x4==("X") and x5==("X") and x6==("X"):
+			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
+			print ("X gagné")
+			win=1
+		if x7==("X") and x8==("X") and x9==("X"):
+			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
+			print ("X gagné")
+			win=1
+		if x1==("X") and x4==("X") and x7==("X"):
+			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
+			print ("X gagné")
+			win=1
+		if x2==("X") and x5==("X") and x8==("X"):
+			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
+			print ("X gagné")
+			win=1
+		if x3==("X") and x6==("X") and x9==("X"):
+			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
+			print ("X gagné")
+			win=1
+		if x1==("X") and x5==("X") and x9==("X"):
+			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
+			print ("X gagné")
+			win=1
+		if x3==("X") and x5==("X") and x7==("X"):
+			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
+			print ("X gagné")
+			win=1
+			
+			#Le vérificateur de victoire pour les O
+			
+		if x1==("O") and x2==("O") and x3==("O"):
+			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
+			print ("O gagné")
+			win=1
+		if x4==("O") and x5==("O") and x6==("O"):
+			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
+			print ("O gagné")
+			win=1
+		if x7==("O") and x8==("O") and x9==("O"):
+			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
+			print ("O gagné")
+			win=1
+		if x1==("O") and x4==("O") and x7==("O"):
+			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
+			print ("O gagné")
+			win=1
+		if x2==("O") and x5==("O") and x8==("O"):
+			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
+			print ("O gagné")
+			win=1
+		if x3==("O") and x6==("O") and x9==("O"):
+			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
+			print ("O gagné")
+			win=1
+		if x1==("O") and x5==("O") and x9==("O"):
+			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
+			print ("O gagné")
+			win=1
+		if x3==("O") and x5==("O") and x7==("O"):
+			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
+			print ("O gagné")
+			win=1
+		
+#Le lancement du "programme"
+			
+entree(x1,x2,x3,x4,x5,x6,x7,x8,x9,joueur,sjoueur,win)
+input()
