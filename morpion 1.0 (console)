@@ -38,7 +38,7 @@ win=0
 def entree(x1,x2,x3,x4,x5,x6,x7,x8,x9,joueur,sjoueur,win):
 	while not win==1:
 		
-		#L'assignateur de joueurs
+#L'assignateur de joueurs
 		
 		if joueur==1:
 			sjoueur=("X")
@@ -48,7 +48,7 @@ def entree(x1,x2,x3,x4,x5,x6,x7,x8,x9,joueur,sjoueur,win):
 			joueur=1
 			sjoueur=("X")
 		
-		#Les entrées
+#Les entrées
 		
 		afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
 		case = -1
@@ -63,7 +63,7 @@ def entree(x1,x2,x3,x4,x5,x6,x7,x8,x9,joueur,sjoueur,win):
 				if not case-1 in range(9):
 					print("Ce n'est pas un numéro valide !")
 			
-			#Le placeur/vérificateur de X ou de O
+#Le placeur/vérificateur de X ou de O
 					
 		if case==1:
 			if x1==(" "):
@@ -122,76 +122,20 @@ def entree(x1,x2,x3,x4,x5,x6,x7,x8,x9,joueur,sjoueur,win):
 	
 		joueur=joueur+1
 		
-		#Le vérificateur de victoire pour les X
+#Le vérificateur de victoire pour les X
 		
-		if x1==("X") and x2==("X") and x3==("X"):
+		if x1==("X") and x2==("X") and x3==("X") or x4==("X") and x5==("X") and x6==("X") or x7==("X") and x8==("X") and x9==("X") or x1==("X") and x4==("X") and x7==("X") or x2==("X") and x5==("X") and x8==("X") or x3==("X") and x6==("X") and x9==("X") or x1==("X") and x5==("X") and x9==("X") or x3==("X") and x5==("X") and x7==("X"):
 			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
-			print ("X gagné")
-			win=1
-		if x4==("X") and x5==("X") and x6==("X"):
-			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
-			print ("X gagné")
-			win=1
-		if x7==("X") and x8==("X") and x9==("X"):
-			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
-			print ("X gagné")
-			win=1
-		if x1==("X") and x4==("X") and x7==("X"):
-			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
-			print ("X gagné")
-			win=1
-		if x2==("X") and x5==("X") and x8==("X"):
-			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
-			print ("X gagné")
-			win=1
-		if x3==("X") and x6==("X") and x9==("X"):
-			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
-			print ("X gagné")
-			win=1
-		if x1==("X") and x5==("X") and x9==("X"):
-			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
-			print ("X gagné")
-			win=1
-		if x3==("X") and x5==("X") and x7==("X"):
-			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
-			print ("X gagné")
+			print ("Le joueur 1 gagne !")
 			win=1
 			
-			#Le vérificateur de victoire pour les O
+#Le vérificateur de victoire pour les O
 			
-		if x1==("O") and x2==("O") and x3==("O"):
+		if x1==("O") and x2==("O") and x3==("O") or x4==("O") and x5==("O") and x6==("O") or x7==("O") and x8==("O") and x9==("O") or x1==("O") and x4==("O") and x7==("O") or x2==("O") and x5==("O") and x8==("O") or x3==("O") and x6==("O") and x9==("O") or x1==("O") and x5==("O") and x9==("O") or x3==("O") and x5==("O") and x7==("O"):
 			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
-			print ("O gagné")
+			print ("Le joueur 2 gagne !")
 			win=1
-		if x4==("O") and x5==("O") and x6==("O"):
-			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
-			print ("O gagné")
-			win=1
-		if x7==("O") and x8==("O") and x9==("O"):
-			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
-			print ("O gagné")
-			win=1
-		if x1==("O") and x4==("O") and x7==("O"):
-			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
-			print ("O gagné")
-			win=1
-		if x2==("O") and x5==("O") and x8==("O"):
-			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
-			print ("O gagné")
-			win=1
-		if x3==("O") and x6==("O") and x9==("O"):
-			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
-			print ("O gagné")
-			win=1
-		if x1==("O") and x5==("O") and x9==("O"):
-			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
-			print ("O gagné")
-			win=1
-		if x3==("O") and x5==("O") and x7==("O"):
-			afficher_grille(x1,x2,x3,x4,x5,x6,x7,x8,x9)
-			print ("O gagné")
-			win=1
-		
+			
 #Le lancement du "programme"
 			
 entree(x1,x2,x3,x4,x5,x6,x7,x8,x9,joueur,sjoueur,win)
