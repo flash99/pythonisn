@@ -1,4 +1,4 @@
-#Le début : 
+# Le début : 
 
 print ("Bonjour ! Ceci est un programme qui ""emule""le jeu du morpion ! ")
 print ("Le joueur 1 sera les X et le joueur 2 sera les O :")
