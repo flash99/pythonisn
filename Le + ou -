@@ -1,0 +1,16 @@
+import random
+
+valeur = random.randint(1,10000)
+
+win=0
+	
+while win == 0:
+	nombre = int(input("Entrez la valeur entre 1 et 10000 :"))
+			
+	if valeur < nombre:
+		print ("La valeur est plus petite !")
+	elif valeur > nombre:
+		print ("La valeur est plus grande !")
+	elif valeur == nombre:
+		print ("Vous avez trouvé la bonne valeur !")
+		win=1
